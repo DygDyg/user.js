@@ -10,6 +10,268 @@
       "sites": [
         "gxplayer.xyz"
       ]
+    },
+    {
+      "slug": "anistar-custom-style",
+      "name": "Anistar custom style",
+      "description": "Тема для сайта anistar",
+      "category": "Стили и темы",
+      "version": "0.47.12",
+      "sites": [
+        "anistar.org",
+        "online-star.org"
+      ]
+    },
+    {
+      "slug": "anistar-kodik",
+      "name": "Anistar kodik pleer",
+      "description": "Добавляет кодик плеер на Anistar",
+      "category": "Видео и плееры",
+      "version": "0.1",
+      "sites": [
+        "anistar.org"
+      ]
+    },
+    {
+      "slug": "bookmyshow",
+      "name": "BookMyShow — Movie Info Collector",
+      "description": "Сбор данных фильма (жанры, актёры, режиссёр, длительность, постер, баннер)",
+      "category": "Утилиты",
+      "version": "1.4",
+      "sites": [
+        "in.bookmyshow.com"
+      ]
+    },
+    {
+      "slug": "poeautotrade",
+      "name": "PoEAutoTrade",
+      "description": "Производит автопокупку товара в \"живом поиске\" на PoE Trade",
+      "category": "Игры",
+      "version": "0.7",
+      "sites": [
+        "ru.pathofexile.com",
+        "www.pathofexile.com"
+      ]
+    },
+    {
+      "slug": "shikimorionline-bykodikplayer",
+      "name": "Shikimori Online by kodik player",
+      "description": "Добавляет кодик плеер на шикимори",
+      "category": "Видео и плееры",
+      "version": "0.2",
+      "sites": [
+        "shikimori.one"
+      ]
+    },
+    {
+      "slug": "shikimori-by-trackanime",
+      "name": "Shikimori By TrackAnime",
+      "description": "Добавляет кнопку перехода на сайт track-anime.dygdyg.ru",
+      "category": "Аниме",
+      "version": "0.4",
+      "sites": [
+        "shikimori.one"
+      ]
+    },
+    {
+      "slug": "vk-fix-youtube",
+      "name": "VK FIX YouTube",
+      "description": "Добавляет плеер к ссылкам на ютуб в переписке",
+      "category": "Видео и плееры",
+      "version": "2025-08-02",
+      "sites": [
+        "vk.com",
+        "web.vk.me"
+      ]
+    },
+    {
+      "slug": "wowhead-rusifikator",
+      "name": "Wowhead русификатор",
+      "description": "Переводит на русский описания предметов с вовхеда",
+      "category": "Игры",
+      "version": "1.4",
+      "sites": [
+        "worldofwarcraft.com",
+        "ru.raider.io"
+      ]
+    },
+    {
+      "slug": "youtube-all",
+      "name": "YouTube — Всё сразу",
+      "description": "Набор улучшений для YouTube: интерфейс, плеер и мелочи «всё сразу».",
+      "category": "Видео и плееры",
+      "version": "1.1",
+      "sites": [
+        "www.youtube.com"
+      ]
+    },
+    {
+      "slug": "youtube-no-autoplay",
+      "name": "YouTube No AutoPlay",
+      "description": "Отключает автоматическое воспроизведение следующего видео на YouTube.",
+      "category": "Видео и плееры",
+      "version": "14.04.19",
+      "sites": [
+        "www.youtube.com"
+      ]
+    },
+    {
+      "slug": "aliexpress",
+      "name": "AliExpress — таймер заказа",
+      "description": "Подсчёт времени с дня оформления заказа на AliExpress.",
+      "category": "Утилиты",
+      "version": "2.2.2",
+      "sites": [
+        "aliexpress.com"
+      ]
+    },
+    {
+      "slug": "analit",
+      "name": "Analit",
+      "description": "Внутренний скрипт аналитики DygDygWEB (экспериментальный).",
+      "category": "Инструменты разработчика",
+      "version": "1.0",
+      "sites": []
+    },
+    {
+      "slug": "anistar-redirect",
+      "name": "Anistar редирект",
+      "description": "Автоматически переключает со старого адреса anistar.appspot.com на актуальный.",
+      "category": "Утилиты",
+      "version": "0.7",
+      "sites": [
+        "anistar.appspot.com"
+      ]
+    },
+    {
+      "slug": "antilah",
+      "name": "Антилах",
+      "description": "Блокирует залипание интерфейса: перехват Ctrl+Win и Shift+Win на любом сайте.",
+      "category": "Утилиты",
+      "version": "2.1.8",
+      "sites": []
+    },
+    {
+      "slug": "disable-mouse-buttons2-3",
+      "name": "Отключить вперёд/назад",
+      "description": "Отключает кнопки «назад/вперёд» мыши, чтобы не терять страницу случайным нажатием.",
+      "category": "Утилиты",
+      "version": "2025-05-05",
+      "sites": []
+    },
+    {
+      "slug": "discord-utility",
+      "name": "Discord Tool",
+      "description": "Мелкие улучшения Discord: галочка в название канала и другие утилиты.",
+      "category": "Соцсети",
+      "version": "0.3",
+      "sites": [
+        "discord.com"
+      ]
+    },
+    {
+      "slug": "google-favicon",
+      "name": "Google Favicons",
+      "description": "Добавляет favicon сайтов в результаты поиска Google.",
+      "category": "Поиск",
+      "version": "1.1",
+      "sites": [
+        "www.google."
+      ]
+    },
+    {
+      "slug": "hamsterkombatgame-clicker",
+      "name": "Hamster Kombat Clicker",
+      "description": "Автокликер для hamsterkombatgame.io — попытка захватить мир.",
+      "category": "Игры",
+      "version": "2024-08-13-01",
+      "sites": [
+        "hamsterkombatgame.io"
+      ]
+    },
+    {
+      "slug": "json-format",
+      "name": "JSON Formatter",
+      "description": "Красивое форматирование JSON прямо в браузере.",
+      "category": "Инструменты разработчика",
+      "version": "2.2.2",
+      "sites": []
+    },
+    {
+      "slug": "kinopoisk-online",
+      "name": "Кинопоиск Online (kodik)",
+      "description": "Добавляет встроенный kodik-плеер для просмотра фильмов на Кинопоиске.",
+      "category": "Видео и плееры",
+      "version": "1.3",
+      "sites": [
+        "www.kinopoisk.ru"
+      ]
+    },
+    {
+      "slug": "ru-raider-io",
+      "name": "Raider.io русификатор",
+      "description": "Переводит на русский описания предметов с Wowhead на raiders.io.",
+      "category": "Игры",
+      "version": "1.3",
+      "sites": [
+        "ru.raider.io"
+      ]
+    },
+    {
+      "slug": "track-anime-discord-rpc",
+      "name": "track-anime Discord RPC",
+      "description": "Показывает текущий таймлайн аниме из track-anime в статусе Discord.",
+      "category": "Аниме",
+      "version": "0.2",
+      "sites": []
+    },
+    {
+      "slug": "translate",
+      "name": "Переводчик Google",
+      "description": "Быстрый перевод выделенного текста через Google Translate.",
+      "category": "Поиск",
+      "version": "2.2.2",
+      "sites": []
+    },
+    {
+      "slug": "vk-dark",
+      "name": "Dark VK Theme",
+      "description": "Тёмная тема для ВКонтакте.",
+      "category": "Стили и темы",
+      "version": "0.0.11.82",
+      "sites": [
+        "vk.com"
+      ]
+    },
+    {
+      "slug": "vrchat",
+      "name": "VRChat Companion",
+      "description": "Дополнение VRChat: полезные мелочи для сайта vrchat.com.",
+      "category": "Игры",
+      "version": "6.5",
+      "sites": [
+        "vrchat.com"
+      ]
+    },
+    {
+      "slug": "youtube-ffmpeg",
+      "name": "YouTube FFmpeg Downloader",
+      "description": "Скачивание и обрезка видео с YouTube через ffmpeg.wasm прямо в браузере.",
+      "category": "Загрузки",
+      "version": "1.2",
+      "sites": [
+        "www.youtube.com"
+      ]
+    },
+    {
+      "slug": "yummyani-by-track-anime",
+      "name": "yummyani by track-anime",
+      "description": "Добавляет кнопку на track-anime.dygdyg.ru на сайт yummyani.me",
+      "category": "Аниме",
+      "version": "2025-08-02",
+      "sites": [
+        "site.yummyani.me"
+      ]
     }
   ]
 }
