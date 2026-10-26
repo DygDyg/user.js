@@ -105,12 +105,18 @@
         </div>
         <div class="filters">
           <input id="search" type="search" placeholder="Поиск по названию, описанию, сайту или автору…" aria-label="Поиск скриптов">
-          <select id="author" aria-label="Автор"><option value="">Все авторы</option></select>
-          <select id="sort" aria-label="Сортировка">
-            <option value="name">По названию</option>
-            <option value="category">По категориям</option>
-            <option value="updated">Сначала новые</option>
-          </select>
+          <div class="select-wrap">
+            <select id="author" aria-label="Автор"><option value="">Все авторы</option></select>
+            <svg class="select-caret" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 8 1 3h10z" fill="currentColor"/></svg>
+          </div>
+          <div class="select-wrap">
+            <select id="sort" aria-label="Сортировка">
+              <option value="name">По названию</option>
+              <option value="category">По категориям</option>
+              <option value="updated">Сначала новые</option>
+            </select>
+            <svg class="select-caret" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 8 1 3h10z" fill="currentColor"/></svg>
+          </div>
         </div>
       </div>
       <div class="cat-pills" id="cat-pills" role="group" aria-label="Фильтр по категориям"></div>

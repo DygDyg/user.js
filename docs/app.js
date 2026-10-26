@@ -231,6 +231,11 @@ async function init() {
       option.value = name;
       authorSel.append(option);
     }
+    // нативный dropdown в новых Chrome/Edge поддерживает стилизацию option
+    if ('CSS' in window && CSS.supports && CSS.supports('appearance: base-select')) {
+      authorSel.classList.add('base-select');
+      sortSel.classList.add('base-select');
+    }
 
     const cats = new Set(scripts.map(s => s.category).filter(Boolean));
     const authors = new Set(scripts.map(s => s.author).filter(Boolean));

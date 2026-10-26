@@ -123,8 +123,36 @@ h2 small{color:var(--muted);font-size:.5em;font-weight:600}
 /* filters */
 .filters{display:flex;gap:12px}
 .filters input,.filters select{appearance:none;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:13px 18px;font:inherit;font-size:14.5px;transition:border-color .2s,box-shadow .2s}
-.filters select{padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239aa6c4'%3E%3Cpath d='M6 8 1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.filters select{padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239aa6c4'%3E%3Cpath d='M6 8 1 3h10z'%3E%3C/path%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .filters input:focus,.filters select:focus{outline:none;border-color:var(--border-strong);box-shadow:0 0 0 4px rgba(139,124,255,.15)}
+
+/* ---- выпадающие списки: тёмное меню поверх любого рендера браузера ---- */
+.filters select option,.filters select optgroup{background:#111726;color:var(--text);font-size:14.5px;padding:8px 12px}
+.filters select option:checked{background:rgba(139,124,255,.35);color:#fff;font-weight:600}
+.filters select option:hover,.filters select option:focus{background:var(--surface-2)}
+.select-wrap{position:relative;display:inline-flex}
+.select-wrap .select-caret{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;transition:transform .2s,color .2s}
+.select-wrap:focus-within .select-caret{color:var(--accent)}
+.select-wrap:has(select:focus) .select-caret{transform:translateY(-50%) rotate(180deg)}
+/* нативный стилизуемый dropdown (Chrome/Edge 133+, appearance: base-select) */
+@supports (appearance:base-select){
+  .filters select.base-select{appearance:base-select;background-image:none}
+  .filters select.base-select::picker(select){
+    appearance:auto;
+    background:#111726;
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:14px;
+    box-shadow:var(--shadow);
+    padding:6px;
+  }
+  .filters select.base-select option{
+    padding:9px 12px;border-radius:9px;color:var(--text);background:transparent;
+  }
+  .filters select.base-select option:hover,.filters select.base-select option:focus{background:var(--surface-2);color:#fff}
+  .filters select.base-select option:checked{background:rgba(139,124,255,.28);color:#fff;font-weight:600}
+  .filters select.base-select option::checkmark{color:var(--accent-2)}
+}
 .filters input{width:min(380px,70vw)}
 
 /* cards grid — compact for a large catalog */
