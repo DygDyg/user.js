@@ -406,33 +406,6 @@
         "chat.openai.com"
       ],
       "author": "ДугДуг"
-    },
-    {
-      "slug": "chatgpt-auto-refresh",
-      "name": "ChatGPT Auto Refresh ↻",
-      "description": "*SAFELY* eliminate 10-minute chat resets + constant network errors + Cloudflare checks from ChatGPT",
-      "category": "Инструменты",
-      "version": "2025.1.12.1",
-      "sites": [],
-      "author": "ДугДуг"
-    },
-    {
-      "slug": "chatgpt-widescreen-mode",
-      "name": "ChatGPT Widescreen Mode 🖥️",
-      "description": "Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on perplexity.ai + poe.com!",
-      "category": "Стили и темы",
-      "version": "2025.1.17.1",
-      "sites": [],
-      "author": "ДугДуг"
-    },
-    {
-      "slug": "chatgpt-auto-talk",
-      "name": "ChatGPT Auto-Talk 📣",
-      "description": "Automatically play ChatGPT responses",
-      "category": "Инструменты",
-      "version": "2025.1.12.1",
-      "sites": [],
-      "author": "ДугДуг"
     }
   ]
 }
