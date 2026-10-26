@@ -7,6 +7,7 @@
 // @grant        GM_addStyle
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/inline-youtube-style/inline-youtube-style.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/inline-youtube-style/inline-youtube-style.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function() {

@@ -9,6 +9,7 @@
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/gxplayer-parallel-upload/gxplayer-parallel-upload.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/gxplayer-parallel-upload/gxplayer-parallel-upload.user.js
 // @grant        none
+// @author       ДугДуг
 // ==/UserScript==
 (function () {
   'use strict';

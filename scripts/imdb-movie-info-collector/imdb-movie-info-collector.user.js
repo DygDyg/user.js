@@ -9,6 +9,7 @@
 // @grant        GM_setClipboard
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/imdb-movie-info-collector/imdb-movie-info-collector.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/imdb-movie-info-collector/imdb-movie-info-collector.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function () {

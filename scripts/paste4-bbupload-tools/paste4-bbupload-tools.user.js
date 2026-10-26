@@ -11,6 +11,7 @@
 // @run-at       document-end
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/paste4-bbupload-tools/paste4-bbupload-tools.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/paste4-bbupload-tools/paste4-bbupload-tools.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function () {

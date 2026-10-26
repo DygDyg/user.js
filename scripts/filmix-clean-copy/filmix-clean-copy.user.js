@@ -9,6 +9,7 @@
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/filmix-clean-copy/filmix-clean-copy.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/filmix-clean-copy/filmix-clean-copy.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function () {

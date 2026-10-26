@@ -3,7 +3,7 @@
 // @namespace       http://tampermonkey.net/
 // @version         0.7
 // @description     Производит автопокупку товара в "живом поиске" на PoE Trade
-// @author          ДугДуг
+// @author       ДугДуг
 // @match           https://ru.pathofexile.com/*
 // @match           https://www.pathofexile.com/*
 // @icon            https://www.google.com/s2/favicons?sz=128&domain=pathofexile.com

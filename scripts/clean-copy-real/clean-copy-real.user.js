@@ -7,6 +7,7 @@
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/clean-copy-real/clean-copy-real.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/clean-copy-real/clean-copy-real.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 document.addEventListener('copy', function (e) {
