@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Антилах (Ctrl+Win, Shift+Win)
 // @description	  Антилах
-// @author        DygDyg
+// @author       ДугДуг
 // @homepage      http://dygdyg.ddns.net
 // @version       2.1.8
 // @include       *

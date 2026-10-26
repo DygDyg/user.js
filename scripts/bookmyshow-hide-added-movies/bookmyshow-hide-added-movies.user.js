@@ -10,6 +10,7 @@
 // @grant        GM_registerMenuCommand
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/bookmyshow-hide-added-movies/bookmyshow-hide-added-movies.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/bookmyshow-hide-added-movies/bookmyshow-hide-added-movies.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function () {

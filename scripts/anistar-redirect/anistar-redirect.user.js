@@ -5,7 +5,7 @@
 // @run-at        document-body
 // @grant         GM_setValue
 // @grant         GM_getValue
-// @author        DygDyg
+// @author       ДугДуг
 // @require       https://code.jquery.com/jquery-3.3.1.min.js
 // @icon          https://anistar.appspot.com/favicon.png
 // @version       0.7

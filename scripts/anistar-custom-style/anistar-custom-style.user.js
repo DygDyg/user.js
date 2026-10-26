@@ -2,7 +2,7 @@
 // @noframes
 // @name          Anistar custom style
 // @description	  Тема для сайта anistar
-// @author        DygDyg
+// @author       ДугДуг
 // @homepage      http://dygdyg.ddns.net
 // @include       /^https?://(.*).online-star(.*)\.org/.*$/
 // @include       /^https?://(.*)anistar(.*)\.org/.*$/

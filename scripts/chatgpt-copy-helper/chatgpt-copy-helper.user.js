@@ -3,7 +3,7 @@
 // @namespace    https://example.local
 // @version      1.0.0
 // @description  Ищет на странице фрагменты в виде [+ ... +] и добавляет кнопку для копирования содержимого в буфер обмена
-// @author       you
+// @author       ДугДуг
 // @match        https://chatgpt.com/*
 // @match        https://chat.openai.com/*
 // @run-at       document-idle

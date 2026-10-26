@@ -7,6 +7,7 @@
 // @grant        GM_setClipboard
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/bookmyshow/bookmyshow.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/bookmyshow/bookmyshow.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function () {

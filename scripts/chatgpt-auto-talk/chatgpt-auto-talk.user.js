@@ -223,7 +223,7 @@
 // @description:zh-SG   自动播放 ChatGPT 的回复
 // @description:zh-TW   自動播放 ChatGPT 的回覆
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
-// @author              Adam Lui
+// @author       ДугДуг
 // @namespace           https://github.com/adamlui
 // @version             2025.1.12.1
 // @license             MIT

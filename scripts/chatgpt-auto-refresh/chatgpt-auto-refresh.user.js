@@ -218,7 +218,7 @@
 // @description:zh-SG   *安全* 消除 10 分钟聊天重置 + 持续的网络错误 + ChatGPT 的 Cloudflare 检查。
 // @description:zh-TW   *安全* 消除 10 分鐘聊天重設 + 持續的網路錯誤 + ChatGPT 的 Cloudflare 檢查。
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
-// @author              Adam Lui
+// @author       ДугДуг
 // @namespace           https://github.com/adamlui
 // @version             2025.1.12.1
 // @license             MIT

@@ -233,7 +233,7 @@
 // @description:zh-SG   通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！
 // @description:zh-TW   使用寬/全/高螢幕+垃圾郵件區塊模式增強 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
-// @author              Adam Lui
+// @author       ДугДуг
 // @namespace           https://github.com/adamlui
 // @version             2025.1.17.1
 // @license             MIT
