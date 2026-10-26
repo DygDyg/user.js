@@ -1,4 +1,15 @@
 {
   "schemaVersion": 1,
-  "scripts": []
+  "scripts": [
+    {
+      "slug": "gxplayer-parallel-upload",
+      "name": "GXPlayer Parallel Upload",
+      "description": "Параллельная загрузка видео, адаптивная настройка потоков, статистика и повтор ошибок.",
+      "category": "Видео",
+      "version": "2.11",
+      "sites": [
+        "gxplayer.xyz"
+      ]
+    }
+  ]
 }
