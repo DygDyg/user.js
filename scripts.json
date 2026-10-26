@@ -4,8 +4,8 @@
     {
       "slug": "gxplayer-parallel-upload",
       "name": "GXPlayer Parallel Upload",
-      "description": "Параллельная загрузка видео, адаптивная настройка потоков, статистика и повтор ошибок.",
-      "category": "Видео",
+      "description": "Параллельная загрузка нескольких видео на GXPlayer: регулировка потоков, прогресс, ETA, автоповтор ошибок и звуковое оповещение.",
+      "category": "Загрузки",
       "version": "2.11",
       "sites": [
         "gxplayer.xyz"
