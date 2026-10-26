@@ -7,6 +7,7 @@
 // @run-at       document-idle
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/youtube-shorts-resize-scroll-guard/youtube-shorts-resize-scroll-guard.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/youtube-shorts-resize-scroll-guard/youtube-shorts-resize-scroll-guard.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (() => {

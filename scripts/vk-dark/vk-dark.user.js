@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Dark VK Theme
 // @description	  Тёмная тема для VK
-// @author        DygDyg
+// @author       ДугДуг
 // @homepage      http://dygdyg.ddns.net
 // @include       https://vk.com/*
 // @require       https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js

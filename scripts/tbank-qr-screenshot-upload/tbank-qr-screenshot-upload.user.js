@@ -8,6 +8,7 @@
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/tbank-qr-screenshot-upload/tbank-qr-screenshot-upload.user.js
 // @updateURL    https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/tbank-qr-screenshot-upload/tbank-qr-screenshot-upload.user.js
+// @author       ДугДуг
 // ==/UserScript==
 
 (function () {
