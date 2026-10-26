@@ -59,18 +59,38 @@
         </dl>
       </div>
 
-      <div class="mock-window reveal d2" aria-hidden="true">
-        <div class="mock-bar"><i></i><i></i><i></i><span>gxplayer.xyz/users/upload.php</span></div>
-        <div class="mock-body">
-          <div class="mock-chip on">⚡ Parallel Upload v2.11</div>
-          <div class="mock-row"><span>video_01.mp4</span><b>100%</b></div>
-          <div class="mock-track"><em style="width:100%"></em></div>
-          <div class="mock-row"><span>video_02.mp4</span><b>64%</b></div>
-          <div class="mock-track"><em style="width:64%" class="anim"></em></div>
-          <div class="mock-row"><span>video_03.mp4</span><b>21%</b></div>
-          <div class="mock-track"><em style="width:21%"></em></div>
-          <div class="mock-foot">3 потока · 18.4 МБ/с · ETA 00:41</div>
+      <div class="showcase reveal d2" id="showcase" aria-live="polite">
+        <!-- frame A: script panel in a browser (built by app.js) -->
+        <div class="mock-window show-frame is-active" data-kind="panel">
+          <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url"></span></div>
+          <div class="mock-body">
+            <div class="mock-chip on"><span class="chip-icon"></span><span class="chip-name"></span></div>
+            <div class="mock-rows"></div>
+            <div class="mock-foot"></div>
+          </div>
         </div>
+
+        <!-- frame B: userscript manager install dialog -->
+        <div class="mock-window show-frame" data-kind="install">
+          <div class="mock-bar"><i></i><i></i><i></i><span>Установка скрипта — Tampermonkey</span></div>
+          <div class="mock-body tm-install">
+            <div class="tm-head">
+              <span class="tm-ico">🐵</span>
+              <div><b class="tm-name"></b><span class="tm-ver"></span></div>
+            </div>
+            <ul class="tm-perms"></ul>
+            <div class="tm-note">Менеджер скриптов перехватывает ссылку сам — остаётся только подтвердить.</div>
+            <div class="tm-actions"><span class="tm-btn ok">Установить ✓</span><span class="tm-btn">Отмена</span></div>
+          </div>
+        </div>
+
+        <!-- frame C: catalog of many scripts -->
+        <div class="mock-window show-frame" data-kind="catalog">
+          <div class="mock-bar"><i></i><i></i><i></i><span>userjs hub — каталог</span></div>
+          <div class="mock-body mini-grid"></div>
+        </div>
+
+        <div class="show-dots" role="tablist" aria-label="Витрина скриптов"></div>
       </div>
     </div>
   </section>

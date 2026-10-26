@@ -9,6 +9,7 @@ const count = document.querySelector('#count');
 const statCount = document.querySelector('#stat-count');
 const statCats = document.querySelector('#stat-cats');
 const statAuthors = document.querySelector('#stat-authors');
+const showcase = document.querySelector('#showcase');
 const REPO = 'https://github.com/DygDyg/user.js';
 const RAW = 'https://raw.githubusercontent.com/DygDyg/user.js/main';
 
@@ -239,10 +240,162 @@ async function init() {
 
     buildCatPills();
     render();
+    if (showcase) { showcase.classList.add('show-live'); startShowcase(); }
   } catch (e) {
     grid.replaceChildren(el('p', 'empty', 'Ошибка загрузки каталога. Обновите страницу.'));
     console.error(e);
   }
+  /* fallback: if catalog failed to load, show static GXPlayer slide so hero isn't empty */
+  if (showcase && !showcase.classList.contains('show-live')) {
+    showcase.classList.add('show-live');
+    buildPanelFrame({ slug: 'gxplayer-parallel-upload', name: 'GXPlayer Parallel Upload', version: '2.11', category: 'Загрузки', author: 'ДугДуг', sites: ['gxplayer.xyz'] });
+    buildInstallFrame({ slug: 'gxplayer-parallel-upload', name: 'GXPlayer Parallel Upload', version: '2.11', category: 'Загрузки', author: 'ДугДуг', sites: ['gxplayer.xyz'] });
+    const dotsBox = showcase.querySelector('.show-dots');
+    if (dotsBox) dotsBox.remove();
+    const cat = showcase.querySelector('[data-kind="catalog"]');
+    if (cat) cat.remove();
+    const inst = showcase.querySelector('[data-kind="install"]');
+    if (inst) inst.remove();
+    showcase.style.minHeight = '';
+  }
+}
+
+/* ---------- hero showcase (rotating preview of several scripts) ---------- */
+const SHOW_META = {
+  'gxplayer-parallel-upload': { icon: '⚡', url: 'gxplayer.xyz/users/upload.php', foot: '3 потока · 18.4 МБ/с · ETA 00:41',
+    rows: [['video_01.mp4', 100], ['video_02.mp4', 64], ['video_03.mp4', 21]] },
+  'youtube-no-autoplay':      { icon: '▶️', url: 'youtube.com/watch?v=…', foot: 'autoplay: off · shuffle: locked',
+    rows: [['next suggested', 0], ['loop — выключен', 0], ['автовоспроизведение', 0]], staticOnly: true },
+  'vk-dark':                  { icon: '🌙', url: 'vk.com/feed', foot: 'тема: dark · контраст AA · авто-переключение',
+    rows: [['фон #19191a', 100], ['карточки', 100], ['текст #e1e3e6', 100]], staticOnly: true },
+  'chatgpt-widescreen-mode':  { icon: '🖥️', url: 'chatgpt.com', foot: 'режим: wide · max-width: none',
+    rows: [['колонка чата', 100], ['боковая панель', 72]], staticOnly: true },
+  'json-format':              { icon: '{}', url: 'example.com/response.json', foot: '2.4 КБ · 87 строк · валиден ✓',
+    rows: [['pretty-print', 100], ['валидация', 100]], staticOnly: true },
+  'track-anime-discord-rpc':  { icon: '🎮', url: 'discord.com · статус', foot: 'rich presence · обновление каждые 15 с',
+    rows: [['Сейчас смотрю: Frieren', 100], ['ep. 12 / 28', 43]], staticOnly: true },
+  'tbank-qr-screenshot-upload': { icon: '📸', url: 'www.tbank-online.com', foot: 'QR найден · скриншот отправлен',
+    rows: [['поиск QR', 100], ['shot_001.png', 88]], staticOnly: true },
+};
+
+function showRow(pair, animate) {
+  const frag = document.createDocumentFragment();
+  const row = el('div', 'mock-row');
+  row.append(el('span', '', pair[0]), el('b', '', pair[1] + '%'));
+  const track = el('div', 'mock-track');
+  const em = document.createElement('em');
+  em.style.width = pair[1] + '%';
+  if (animate && pair[1] > 0 && pair[1] < 100) em.className = 'anim';
+  track.append(em);
+  frag.append(row, track);
+  return frag;
+}
+
+function buildPanelFrame(s) {
+  const frame = showcase.querySelector('[data-kind="panel"]');
+  const meta = SHOW_META[s.slug] || {};
+  frame.querySelector('.mock-url').textContent = meta.url || (s.sites && s.sites[0]) || 'userjs hub';
+  frame.querySelector('.chip-icon').textContent = meta.icon || '🧩';
+  frame.querySelector('.chip-name').textContent = `${s.name}${s.version ? ' v' + s.version : ''}`;
+  const rows = meta.rows || [
+    [(s.category || 'скрипт') + ' активен', 100],
+    [(s.sites && s.sites[0]) || 'страница', 72],
+  ];
+  const holder = frame.querySelector('.mock-rows');
+  holder.replaceChildren(...rows.map((p, i) => showRow(p, !meta.staticOnly && i === 1)));
+  frame.querySelector('.mock-foot').textContent = meta.foot || (s.author ? 'автор: ' + s.author : '');
+}
+
+function buildInstallFrame(s) {
+  const frame = showcase.querySelector('[data-kind="install"]');
+  frame.querySelector('.tm-name').textContent = s.name || s.slug;
+  frame.querySelector('.tm-ver').textContent = `v${s.version || '1.0'} · @${s.author || 'DygDyg'} · ${s.category || ''}`;
+  const sites = Array.isArray(s.sites) && s.sites.length ? s.sites.join(', ') : 'все сайты';
+  frame.querySelector('.tm-perms').replaceChildren(
+    ...[`🌐 Работает на: ${sites}`, '✏️ Изменяет интерфейс страницы', '💾 Использует GM_storage'].map(t => el('li', '', t)));
+}
+
+function buildCatalogFrame() {
+  const frame = showcase.querySelector('[data-kind="catalog"]');
+  const gridMini = frame.querySelector('.mini-grid');
+  const picks = scripts.slice(0, 6);
+  gridMini.replaceChildren(...picks.map(s => {
+    const c = el('div', 'mini-card');
+    const head = el('div', 'mini-head');
+    const ava = el('span', 'avatar mini-ava', (s.author || 'D').slice(0, 1).toLocaleUpperCase('ru'));
+    ava.style.background = avatarColor(s.author || 'D');
+    head.append(ava, el('b', '', s.name));
+    c.append(head, el('span', 'mini-cat', s.category || ''), el('span', 'mini-ver', 'v' + (s.version || '1.0')));
+    return c;
+  }));
+  const more = el('div', 'mini-more');
+  more.textContent = `+ ещё ${Math.max(scripts.length - 6, 0)} в каталоге`;
+  gridMini.append(more);
+}
+
+function startShowcase() {
+  showcase.style.display = '';
+  const panel = showcase.querySelector('[data-kind="panel"]');
+  const install = showcase.querySelector('[data-kind="install"]');
+  const catalog = showcase.querySelector('[data-kind="catalog"]');
+  const dotsBox = showcase.querySelector('.show-dots');
+
+  /* slide list: featured script first, then a few others from different categories */
+  const bySlug = slug => scripts.find(s => s.slug === slug);
+  const featured = bySlug('gxplayer-parallel-upload') || scripts[0];
+  const rest = scripts.filter(s => s !== featured && SHOW_META[s.slug]);
+  const seenCats = new Set();
+  const slides = [];
+  for (const s of rest) {
+    if (!seenCats.has(s.category)) { seenCats.add(s.category); slides.push(s); }
+    if (slides.length >= 5) break;
+  }
+  const all = featured ? [featured, ...slides.filter(s => s !== featured)] : slides;
+  if (!all.length) return;
+
+  /* dots */
+  dotsBox.replaceChildren(...all.map((s, i) => {
+    const b = el('button', 'dot' + (i === 0 ? ' on' : ''), String(i + 1));
+    b.type = 'button';
+    b.title = s.name;
+    b.setAttribute('role', 'tab');
+    b.addEventListener('click', () => { go(i); restartTimer(); });
+    return b;
+  }));
+
+  let idx = 0;
+  let timer = null;
+  const frames = [panel, install, catalog];
+  let subIdx = 0;
+
+  function paint() {
+    frames.forEach((f, i) => f.classList.toggle('is-active', i === subIdx));
+    dotsBox.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('on', i === idx));
+  }
+  function go(i) {
+    idx = (i + all.length) % all.length;
+    const s = all[idx];
+    buildPanelFrame(s);
+    buildInstallFrame(s);
+    subIdx = 0;
+    paint();
+  }
+  function tick() {
+    subIdx = (subIdx + 1) % frames.length;
+    if (subIdx === 0) go(idx + 1); else paint();
+  }
+  function restartTimer() { clearInterval(timer); timer = setInterval(tick, 4200); }
+
+  buildCatalogFrame();
+  go(0);
+  restartTimer();
+
+  /* pause when hidden or hovered */
+  showcase.addEventListener('mouseenter', () => clearInterval(timer));
+  showcase.addEventListener('mouseleave', restartTimer);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) clearInterval(timer); else restartTimer();
+  });
 }
 
 search.addEventListener('input', render);
