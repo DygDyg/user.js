@@ -4,7 +4,7 @@
     {
       "slug": "shikimori-by-trackanime",
       "name": "Shikimori By TrackAnime",
-      "description": "Добавляет кнопку перехода на сайт track-anime.dygdyg.ru",
+      "description": "Добавляет на страницы аниме Shikimori удобную кнопку перехода к TrackAnime, чтобы быстрее открывать связанную страницу.",
       "category": "Аниме",
       "version": "0.4",
       "sites": [
@@ -15,7 +15,7 @@
     {
       "slug": "track-anime-discord-rpc",
       "name": "track-anime Discord RPC",
-      "description": "Показывает текущий таймлайн аниме из track-anime в статусе Discord.",
+      "description": "Передаёт информацию о текущем таймлайне аниме из TrackAnime в статус Discord, связывая просмотр и активность в профиле.",
       "category": "Аниме",
       "version": "0.2",
       "sites": [],
@@ -24,7 +24,7 @@
     {
       "slug": "yummyani-by-track-anime",
       "name": "yummyani by track-anime",
-      "description": "Добавляет кнопку на track-anime.dygdyg.ru на сайт yummyani.me",
+      "description": "Добавляет на YummyAni кнопку перехода к TrackAnime, упрощая переключение между страницами аниме.",
       "category": "Аниме",
       "version": "2025-08-02",
       "sites": [
@@ -35,7 +35,7 @@
     {
       "slug": "anistar-kodik",
       "name": "Anistar kodik pleer",
-      "description": "Добавляет кодик плеер на Anistar",
+      "description": "Встраивает видеоплеер Kodik на страницы Anistar, добавляя дополнительный способ просмотра видео.",
       "category": "Видео и плееры",
       "version": "0.1",
       "sites": [
@@ -46,7 +46,7 @@
     {
       "slug": "shikimorionline-bykodikplayer",
       "name": "Shikimori Online by kodik player",
-      "description": "Добавляет кодик плеер на шикимори",
+      "description": "Добавляет плеер Kodik на страницы Shikimori для просмотра видео непосредственно на сайте.",
       "category": "Видео и плееры",
       "version": "0.2",
       "sites": [
@@ -57,7 +57,7 @@
     {
       "slug": "vk-fix-youtube",
       "name": "VK FIX YouTube",
-      "description": "Добавляет плеер к ссылкам на ютуб в переписке",
+      "description": "Встраивает проигрыватель YouTube для ссылок на видео в переписке ВКонтакте, позволяя смотреть ролики без лишних переходов.",
       "category": "Видео и плееры",
       "version": "2025-08-02",
       "sites": [
@@ -69,7 +69,7 @@
     {
       "slug": "youtube-no-autoplay",
       "name": "YouTube No AutoPlay",
-      "description": "Отключает автоматическое воспроизведение следующего видео на YouTube.",
+      "description": "Отключает автоматический запуск следующего ролика на YouTube, оставляя управление продолжением просмотра пользователю.",
       "category": "Видео и плееры",
       "version": "14.04.19",
       "sites": [
@@ -80,7 +80,7 @@
     {
       "slug": "youtube-all",
       "name": "YouTube — Всё сразу",
-      "description": "Набор улучшений для YouTube: интерфейс, плеер и мелочи «всё сразу».",
+      "description": "Объединяет набор доработок интерфейса и видеоплеера YouTube в одном пользовательском скрипте.",
       "category": "Видео и плееры",
       "version": "1.1",
       "sites": [
@@ -92,7 +92,7 @@
     {
       "slug": "kinopoisk-online",
       "name": "Кинопоиск Online (kodik)",
-      "description": "Добавляет встроенный kodik-плеер для просмотра фильмов на Кинопоиске.",
+      "description": "Добавляет встроенный плеер Kodik на страницы Кинопоиска, чтобы видео можно было открывать прямо со страницы фильма.",
       "category": "Видео и плееры",
       "version": "1.3",
       "sites": [
@@ -103,7 +103,7 @@
     {
       "slug": "gxplayer-parallel-upload",
       "name": "GXPlayer Parallel Upload",
-      "description": "Параллельная загрузка нескольких видео на GXPlayer: регулировка потоков, прогресс, ETA, автоповтор ошибок и звуковое оповещение.",
+      "description": "Ускоряет работу с очередью загрузок GXPlayer: несколько параллельных потоков, управление количеством загрузок, прогресс, оценка времени, повторы ошибок и звуковые уведомления.",
       "category": "Загрузки",
       "version": "2.11",
       "sites": [
@@ -114,7 +114,7 @@
     {
       "slug": "youtube-ffmpeg",
       "name": "YouTube FFmpeg Downloader",
-      "description": "Скачивание и обрезка видео с YouTube через ffmpeg.wasm прямо в браузере.",
+      "description": "Добавляет инструменты скачивания и обрезки видео YouTube в браузере с обработкой через ffmpeg.wasm.",
       "category": "Загрузки",
       "version": "1.2",
       "sites": [
@@ -125,7 +125,7 @@
     {
       "slug": "hamsterkombatgame-clicker",
       "name": "Hamster Kombat Clicker",
-      "description": "Автокликер для hamsterkombatgame.io — попытка захватить мир.",
+      "description": "Автоматизирует повторяющиеся нажатия в Hamster Kombat, заменяя ручные клики работой пользовательского скрипта.",
       "category": "Игры",
       "version": "2024-08-13-01",
       "sites": [
@@ -136,7 +136,7 @@
     {
       "slug": "poeautotrade",
       "name": "PoEAutoTrade",
-      "description": "Производит автопокупку товара в \"живом поиске\" на PoE Trade",
+      "description": "Автоматизирует действия по покупке товаров из живого поиска торговли Path of Exile.",
       "category": "Игры",
       "version": "0.7",
       "sites": [
@@ -148,7 +148,7 @@
     {
       "slug": "ru-raider-io",
       "name": "Raider.io русификатор",
-      "description": "Переводит на русский описания предметов с Wowhead на raiders.io.",
+      "description": "Добавляет русскоязычные описания предметов на Raider.IO с использованием данных Wowhead.",
       "category": "Игры",
       "version": "1.3",
       "sites": [
@@ -159,7 +159,7 @@
     {
       "slug": "vrchat",
       "name": "VRChat Companion",
-      "description": "Дополнение VRChat: полезные мелочи для сайта vrchat.com.",
+      "description": "Расширяет возможности сайта VRChat набором дополнительных функций и небольших улучшений интерфейса.",
       "category": "Игры",
       "version": "6.5",
       "sites": [
@@ -171,7 +171,7 @@
     {
       "slug": "wowhead-rusifikator",
       "name": "Wowhead русификатор",
-      "description": "Переводит на русский описания предметов с вовхеда",
+      "description": "Помогает читать описания предметов World of Warcraft на русском языке с использованием данных Wowhead.",
       "category": "Игры",
       "version": "1.4",
       "sites": [
@@ -183,7 +183,7 @@
     {
       "slug": "analit",
       "name": "Analit",
-      "description": "Внутренний скрипт аналитики DygDygWEB (экспериментальный).",
+      "description": "Экспериментальный внутренний скрипт аналитики для проекта DygDygWEB.",
       "category": "Инструменты разработчика",
       "version": "1.0",
       "sites": [],
@@ -192,7 +192,7 @@
     {
       "slug": "json-format",
       "name": "JSON Formatter",
-      "description": "Красивое форматирование JSON прямо в браузере.",
+      "description": "Преобразует необработанный JSON в более удобное для чтения форматированное представление прямо в браузере.",
       "category": "Инструменты разработчика",
       "version": "2.2.2",
       "sites": [],
@@ -201,7 +201,7 @@
     {
       "slug": "google-favicon",
       "name": "Google Favicons",
-      "description": "Добавляет favicon сайтов в результаты поиска Google.",
+      "description": "Показывает значки сайтов рядом с результатами поиска Google, помогая быстрее различать источники.",
       "category": "Поиск",
       "version": "1.1",
       "sites": [
@@ -213,7 +213,7 @@
     {
       "slug": "translate",
       "name": "Переводчик Google",
-      "description": "Быстрый перевод выделенного текста через Google Translate.",
+      "description": "Позволяет быстро перевести выделенный на странице текст с помощью Google Translate.",
       "category": "Поиск",
       "version": "2.2.2",
       "sites": [],
@@ -222,7 +222,7 @@
     {
       "slug": "discord-utility",
       "name": "Discord Tool",
-      "description": "Мелкие улучшения Discord: галочка в название канала и другие утилиты.",
+      "description": "Добавляет небольшие улучшения веб-интерфейса Discord, включая дополнительную отметку в названии канала.",
       "category": "Соцсети",
       "version": "0.3",
       "sites": [
@@ -233,7 +233,7 @@
     {
       "slug": "anistar-custom-style",
       "name": "Anistar custom style",
-      "description": "Тема для сайта anistar",
+      "description": "Меняет оформление Anistar и Online-Star с помощью пользовательских стилей интерфейса.",
       "category": "Стили и темы",
       "version": "0.47.12",
       "sites": [
@@ -245,7 +245,7 @@
     {
       "slug": "vk-dark",
       "name": "Dark VK Theme",
-      "description": "Тёмная тема для ВКонтакте.",
+      "description": "Применяет тёмное оформление к интерфейсу ВКонтакте для более комфортной работы в тёмной теме.",
       "category": "Стили и темы",
       "version": "0.0.11.82",
       "sites": [
@@ -256,7 +256,7 @@
     {
       "slug": "aliexpress",
       "name": "AliExpress — таймер заказа",
-      "description": "Подсчёт времени с дня оформления заказа на AliExpress.",
+      "description": "Показывает, сколько времени прошло с момента оформления заказа на AliExpress.",
       "category": "Утилиты",
       "version": "2.2.2",
       "sites": [
@@ -267,7 +267,7 @@
     {
       "slug": "anistar-redirect",
       "name": "Anistar редирект",
-      "description": "Автоматически переключает со старого адреса anistar.appspot.com на актуальный.",
+      "description": "Перенаправляет со старого адреса Anistar на актуальный сайт, избавляя от ручного перехода.",
       "category": "Утилиты",
       "version": "0.7",
       "sites": [
@@ -278,7 +278,7 @@
     {
       "slug": "bookmyshow",
       "name": "BookMyShow — Movie Info Collector",
-      "description": "Сбор данных фильма (жанры, актёры, режиссёр, длительность, постер, баннер)",
+      "description": "Собирает со страниц BookMyShow сведения о фильмах: жанры, актёрский состав, режиссёра, продолжительность и изображения.",
       "category": "Утилиты",
       "version": "1.4",
       "sites": [
@@ -289,7 +289,7 @@
     {
       "slug": "antilah",
       "name": "Антилах",
-      "description": "Блокирует залипание интерфейса: перехват Ctrl+Win и Shift+Win на любом сайте.",
+      "description": "Перехватывает сочетания Ctrl+Win и Shift+Win, чтобы уменьшить нежелательные реакции интерфейса при работе с сайтами.",
       "category": "Утилиты",
       "version": "2.1.8",
       "sites": [],
@@ -298,7 +298,7 @@
     {
       "slug": "disable-mouse-buttons2-3",
       "name": "Отключить вперёд/назад",
-      "description": "Отключает кнопки «назад/вперёд» мыши, чтобы не терять страницу случайным нажатием.",
+      "description": "Предотвращает случайные переходы назад и вперёд при нажатии дополнительных кнопок мыши во время просмотра страниц.",
       "category": "Утилиты",
       "version": "2025-05-05",
       "sites": [],
