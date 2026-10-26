@@ -1,5 +1,7 @@
 # GXPlayer Parallel Upload
 
+**Автор:** ДугДуг
+
 Пользовательский скрипт для загрузки видео на [GXPlayer](https://gxplayer.xyz/users/upload.php) через Tampermonkey или Violentmonkey.
 
 **Версия:** 2.11  
