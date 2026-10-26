@@ -1,12 +1,13 @@
 # UserJS Hub
 
-A curated collection of browser userscripts by DygDyg.
+A curated collection of browser userscripts by DygDyg and co-authors (28 scripts and counting).
 
 **[Website (GitHub Pages)](https://dygdyg.github.io/user.js/)** · **[Scripts](scripts/)** · **[Template](templates/example.user.js)**
 
 ## Features
 
-- Responsive dark-mode catalog with search and category filters
+- Responsive dark-mode catalog with search, category pills, author filter and sorting
+- In-page documentation modal (renders each script's README; the GitHub link lives inside the modal)
 - Separate folder and documentation for each script
 - One-click userscript install links
 - GitHub Actions deployment to GitHub Pages
@@ -17,7 +18,7 @@ A curated collection of browser userscripts by DygDyg.
 1. Create `scripts/<slug>/<slug>.user.js` and `scripts/<slug>/README.md`.
 2. Use `templates/example.user.js` as a starting point.
 3. Set the `@match` and `@grant` directives, plus `@downloadURL` and `@updateURL` to raw GitHub URLs.
-4. Register the script in `scripts.json` with slug, name, description, category, version and sites.
+4. Register the script in `scripts.json` with slug, name, description, category, version, sites and author.
 5. Push to `main`. The Pages workflow will publish the updated catalog.
 
 ## Enable GitHub Pages

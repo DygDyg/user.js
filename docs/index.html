@@ -43,7 +43,7 @@
           <span class="pulse-dot"></span> Open source · Tampermonkey · Violentmonkey
         </div>
         <h1 class="reveal d1">Сайты могут быть <span class="grad">удобнее.</span></h1>
-        <p class="lead reveal d2">Курируемая коллекция пользовательских скриптов от <b>DygDyg</b>:
+        <p class="lead reveal d2">Большая курируемая коллекция пользовательских скриптов от <b>DygDyg</b> и соавторов:
         автоматизация рутины, доработка интерфейсов и полезные инструменты — прямо в браузере.</p>
         <div class="cta-row reveal d3">
           <a class="btn btn-primary" href="#catalog">Смотреть скрипты
@@ -53,7 +53,8 @@
         </div>
         <dl class="stats reveal d4">
           <div><dt id="stat-count">0</dt><dd>скриптов</dd></div>
-          <div><dt>MIT</dt><dd>лицензия</dd></div>
+          <div><dt id="stat-cats">0</dt><dd>категорий</dd></div>
+          <div><dt id="stat-authors">0</dt><dd>авторов</dd></div>
           <div><dt>1 клик</dt><dd>до установки</dd></div>
         </dl>
       </div>
@@ -83,15 +84,41 @@
           <h2>Все скрипты <small id="count">0</small></h2>
         </div>
         <div class="filters">
-          <input id="search" type="search" placeholder="Поиск по названию, описанию, сайту…" aria-label="Поиск скриптов">
-          <select id="category" aria-label="Категория"><option value="">Все категории</option></select>
+          <input id="search" type="search" placeholder="Поиск по названию, описанию, сайту или автору…" aria-label="Поиск скриптов">
+          <select id="author" aria-label="Автор"><option value="">Все авторы</option></select>
+          <select id="sort" aria-label="Сортировка">
+            <option value="name">По названию</option>
+            <option value="category">По категориям</option>
+            <option value="updated">Сначала новые</option>
+          </select>
         </div>
       </div>
-      <div class="grid" id="grid" aria-live="polite">
+      <div class="cat-pills" id="cat-pills" role="group" aria-label="Фильтр по категориям"></div>
+      <div class="grid grid-compact" id="grid" aria-live="polite">
         <p class="empty">Загрузка…</p>
       </div>
     </div>
   </section>
+
+  <!-- MODAL: documentation -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-bar">
+        <span class="modal-bar-title" id="modal-title">Документация</span>
+        <button class="modal-close" id="modal-close" type="button" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p class="modal-loading">Загрузка…</p>
+      </div>
+      <div class="modal-foot">
+        <a class="btn btn-ghost btn-sm" id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.59 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.66-.19-3.41-.83-3.41-3.7 0-.82.29-1.5.77-2.03-.08-.19-.34-.96.07-2 .06-.19.18-.68.77-.66-.21-.66.15-1.96.77-2.62 0 0 1.57.5 2.55 1.69a6.3 6.3 0 0 1 3.4 0c.98-1.19 2.55-1.69 2.55-1.69.59.66.71 1.96.77 2.62.49.53.78 1.21.78 2.03 0 2.88-1.76 3.51-3.44 3.69.54.47 1.02 1.4 1.02 2.82 0 2.04-.02 3.68-.02 4.18 0 .41.27.89 1.01.74A8.01 8.01 0 0 0 16 8c0-4.41-3.59-8-8-8Z"/></svg>
+          Открыть на GitHub ↗
+        </a>
+        <a class="btn btn-primary btn-sm" id="modal-install-link" href="#">Установить скрипт</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HOW TO -->
   <section id="how" class="section">
@@ -103,22 +130,49 @@
       <div class="steps">
         <div class="step-card reveal">
           <div class="step-num">01</div>
-          <h3>Установи менеджер</h3>
-          <p>Tampermonkey или Violentmonkey — расширение из магазина браузеров.</p>
-          <div class="mgr-logos"><span title="Tampermonkey">🐵</span><span title="Violentmonkey">🐒</span></div>
+          <h3>Установи менеджер скриптов</h3>
+          <p>Одно расширение из магазина браузеров — и все скрипты ставятся в один клик, обновляются сами.</p>
+          <ul class="mgr-links">
+            <li><span class="mgr-ico tm">🐵</span>
+              <div><b>Tampermonkey</b>
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ru" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
+                <a href="https://microsoftedge.microsoft.com/addons/details/oiiaigjnkhngdbnoookogelabohpglmd" target="_blank" rel="noopener noreferrer">Edge Add-ons ↗</a>
+                <a href="https://addons.mozilla.org/ru/firefox/addon/tampermonkey/" target="_blank" rel="noopener noreferrer">Firefox Add-ons ↗</a>
+              </div>
+            </li>
+            <li><span class="mgr-ico vm">🥷</span>
+              <div><b>Violentmonkey</b>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=ru" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
+                <a href="https://addons.mozilla.org/ru/firefox/addon/violentmonkey/" target="_blank" rel="noopener noreferrer">Firefox Add-ons ↗</a>
+              </div>
+            </li>
+          </ul>
+          <p class="hint">Для Android с Chrome или Kiwi Browser — Tampermonkey из <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ru" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>.</p>
         </div>
         <div class="step-card reveal d1">
           <div class="step-num">02</div>
-          <h3>Выбери скрипт</h3>
-          <p>Изучи описание, список сайтов и запрашиваемые разрешения в каталоге.</p>
-          <div class="mgr-logos"><span>🔍</span><span>📄</span></div>
+          <h3>Выбери скрипт в каталоге</h3>
+          <p>Фильтруй по категориям, авторам и сайтам. Открой «Документацию» прямо на странице — описание, возможности и разрешения будут перед глазами.</p>
+          <div class="mgr-logos"><span>🔍</span><span>📄</span><span>🏷️</span></div>
         </div>
         <div class="step-card reveal d2">
           <div class="step-num">03</div>
           <h3>Нажми «Установить»</h3>
-          <p>Подтверди установку в менеджере — обновления приходят автоматически.</p>
-          <div class="mgr-logos"><span>✅</span><span>🔄</span></div>
+          <p>Менеджер сам перехватит ссылку и покажет предпросмотр — подтверди установку. Дальше обновления приходят автоматически.</p>
+          <div class="mgr-logos"><span>✅</span><span>🔄</span><span>⚡</span></div>
         </div>
+      </div>
+
+      <div class="browser-table reveal">
+        <table>
+          <thead><tr><th>Браузер</th><th>Что установить</th><th>Как открыть магазин расширений</th></tr></thead>
+          <tbody>
+            <tr><td>Chrome / Яндекс / Edge / Opera</td><td>Tampermonkey или Violentmonkey</td><td>Ссылки на Chrome Web Store в шаге 01 (в Edge — Edge Add-ons)</td></tr>
+            <tr><td>Firefox</td><td>Tampermonkey или Violentmonkey</td><td>addons.mozilla.org — поиск «userscript manager»</td></tr>
+            <tr><td>Safari (macOS/iOS)</td><td>Userscripts от Quark Software</td><td>App Store → «Userscripts»; включите расширение в Настройки Safari</td></tr>
+            <tr><td>Android (Kiwi / Chrome)</td><td>Tampermonkey</td><td>Kiwi Browser совместим с расширениями Chrome</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
