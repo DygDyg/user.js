@@ -276,6 +276,14 @@ const SHOW_META = {
     rows: [['Сейчас смотрю: Frieren', 100], ['ep. 12 / 28', 43]], staticOnly: true },
   'tbank-qr-screenshot-upload': { icon: '📸', url: 'www.tbank-online.com', foot: 'QR найден · скриншот отправлен',
     rows: [['поиск QR', 100], ['shot_001.png', 88]], staticOnly: true },
+  'youtube-ffmpeg':             { icon: '🎬', url: 'youtube.com/watch?v=…', foot: '1080p · mp4 · конвертация завершена ✓',
+    rows: [['audio.m4a', 100], ['video.mp4', 92], ['mux → final.mp4', 35]] },
+  'hamsterkombatgame-clicker':  { icon: '🐹', url: 'hamsterkombatgame.io', foot: 'авто-тап · 12/с · энергия 84%',
+    rows: [['серия тапов', 84], ['буст активен', 100]], staticOnly: true },
+  'translate':                  { icon: '🌍', url: 'translate.google.com', foot: 'EN → RU · авто-определение языка',
+    rows: [['оригинал', 100], ['перевод', 100]], staticOnly: true },
+  'imdb-movie-info-collector':  { icon: '🎞️', url: 'imdb.com/title/tt…', foot: 'рейтинг · голосов: 128.4K · TTID сохранён',
+    rows: [['votes parser', 100], ['экспорт в .json', 61]], staticOnly: true },
 };
 
 function showRow(pair, animate) {
@@ -348,7 +356,7 @@ function startShowcase() {
   const slides = [];
   for (const s of rest) {
     if (!seenCats.has(s.category)) { seenCats.add(s.category); slides.push(s); }
-    if (slides.length >= 5) break;
+    if (slides.length >= 9) break;
   }
   const all = featured ? [featured, ...slides.filter(s => s !== featured)] : slides;
   if (!all.length) return;
