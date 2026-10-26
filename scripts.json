@@ -279,10 +279,10 @@
     },
     {
       "slug": "bookmyshow",
-      "name": "BookMyShow — Movie Info Collector",
-      "description": "Собирает со страниц BookMyShow сведения о фильмах: жанры, актёрский состав, режиссёра, продолжительность и изображения.",
-      "category": "Утилиты",
-      "version": "1.4",
+      "name": "BookMyShow — Movie Info Collector FIX",
+      "description": "Сбор данных фильма BookMyShow с обновлением данных при каждом открытии меню",
+      "category": "Кино",
+      "version": "1.8",
       "sites": [
         "in.bookmyshow.com"
       ],
@@ -305,6 +305,134 @@
       "version": "2025-05-05",
       "sites": [],
       "author": "ДугДуг"
+    },
+    {
+      "slug": "tbank-qr-screenshot-upload",
+      "name": "TBank QR Screenshot Upload (v5)",
+      "description": "Автоматический скриншот выбранного окна и вставка QR-кода в форму Т-Банка (работает при SPA-навигации)",
+      "category": "Утилиты",
+      "version": "1.5",
+      "sites": [
+        "www.tbank-online.com"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "imdb-movie-info-collector",
+      "name": "IMDb — Movie Info Collector (v3.4 Votes Parser + TTID)",
+      "description": "IMDb: добавлен парсер голосов (2.2K → 2200), поле IMDb ID, студия, рейтинг, постер, актёры и прочее",
+      "category": "Кино",
+      "version": "3.4",
+      "sites": [
+        "www.imdb.com",
+        "imdb.com",
+        "m.imdb.com"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "inline-youtube-style",
+      "name": "Inline YouTube Style",
+      "description": "Add custom CSS to YouTube",
+      "category": "Стили и темы",
+      "version": "1.0",
+      "sites": [
+        "www.youtube.com"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "clean-copy-real",
+      "name": "Clean Copy REAL",
+      "description": "Скрипт из резервной копии Tampermonkey",
+      "category": "Утилиты",
+      "version": "2.0",
+      "sites": [],
+      "author": "Не указан"
+    },
+    {
+      "slug": "paste4-bbupload-tools",
+      "name": "Paste4 -> BBUpload tools",
+      "description": "Ищет ссылки на bbupload на paste4, показывает размер и FileName, добавляет копирование, счётчик 1080р/720р, подсветку 1080р и закреплённый баннер",
+      "category": "Загрузки",
+      "version": "1.8",
+      "sites": [
+        "paste4.org",
+        "www.paste4.org"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "bookmyshow-hide-added-movies",
+      "name": "BookMyShow hide added movies + copy ID",
+      "description": "Скрывает фильмы BookMyShow по ID + копирование",
+      "category": "Кино",
+      "version": "1.2",
+      "sites": [
+        "in.bookmyshow.com"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "filmix-clean-copy",
+      "name": "Filmix: убрать \"Смотреть подробнее\" при копировании",
+      "description": "Отключает добавление ссылки Filmix при копировании текста",
+      "category": "Утилиты",
+      "version": "1.0",
+      "sites": [
+        "filmix.gg"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "youtube-shorts-resize-scroll-guard",
+      "name": "YouTube Shorts Resize Scroll Guard",
+      "description": "Не даёт Shorts перелистываться при resize/переносе окна; обычный скролл не трогает",
+      "category": "Видео и плееры",
+      "version": "0.2.0",
+      "sites": [
+        "www.youtube.com"
+      ],
+      "author": "Не указан"
+    },
+    {
+      "slug": "chatgpt-copy-helper",
+      "name": "ChatGPT [+..+] Copy Helper",
+      "description": "Ищет на странице фрагменты в виде [+ ... +] и добавляет кнопку для копирования содержимого в буфер обмена",
+      "category": "Инструменты",
+      "version": "1.0.0",
+      "sites": [
+        "chatgpt.com",
+        "chat.openai.com"
+      ],
+      "author": "you"
+    },
+    {
+      "slug": "chatgpt-auto-refresh",
+      "name": "ChatGPT Auto Refresh ↻",
+      "description": "*SAFELY* eliminate 10-minute chat resets + constant network errors + Cloudflare checks from ChatGPT",
+      "category": "Инструменты",
+      "version": "2025.1.12.1",
+      "sites": [],
+      "author": "Adam Lui"
+    },
+    {
+      "slug": "chatgpt-widescreen-mode",
+      "name": "ChatGPT Widescreen Mode 🖥️",
+      "description": "Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on perplexity.ai + poe.com!",
+      "category": "Стили и темы",
+      "version": "2025.1.17.1",
+      "sites": [],
+      "author": "Adam Lui"
+    },
+    {
+      "slug": "chatgpt-auto-talk",
+      "name": "ChatGPT Auto-Talk 📣",
+      "description": "Automatically play ChatGPT responses",
+      "category": "Инструменты",
+      "version": "2025.1.12.1",
+      "sites": [],
+      "author": "Adam Lui"
     }
   ]
 }

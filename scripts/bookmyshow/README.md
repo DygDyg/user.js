@@ -1,14 +1,12 @@
-# BookMyShow — Movie Info Collector
+# BookMyShow — Movie Info Collector FIX
 
-Сбор данных фильма (жанры, актёры, режиссёр, длительность, постер, баннер)
+Сбор данных фильма BookMyShow с обновлением данных при каждом открытии меню
 
-- **Версия:** 1.4
-- **Категория:** Утилиты
-- **Сайты:** `in.bookmyshow.com`
+- **Версия:** 1.8
+- **Автор в оригинальных метаданных:** не указан
+- **Источник:** резервная копия Tampermonkey от 26 октября 2026 г.
+- **Сайты/шаблоны:** `https://in.bookmyshow.com/movies/*/*`
 
-## Установка
+[Установить userscript](https://raw.githubusercontent.com/DygDyg/user.js/main/scripts/bookmyshow/bookmyshow.user.js)
 
-1. Установите [Tampermonkey](https://www.tampermonkey.net/) или Violentmonkey.
-2. Откройте [`bookmyshow.user.js`](./bookmyshow.user.js) и нажмите «Установить».
-
-> Скрипт перенесён из архива [DygDyg/DygDygWEB](https://github.com/DygDyg/DygDygWEB/tree/master/user.js).
+> Перенесено из резервной копии без проверки работоспособности на актуальных версиях сайтов. Код и оригинальные метаданные автора сохранены, кроме ссылок обновления, указывающих теперь на UserJS Hub.
