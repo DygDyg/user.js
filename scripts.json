@@ -4,7 +4,7 @@
     {
       "slug": "shikimori-by-trackanime",
       "name": "Shikimori By TrackAnime",
-      "description": "Добавляет на страницы аниме Shikimori удобную кнопку перехода к TrackAnime, чтобы быстрее открывать связанную страницу.",
+      "description": "Добавляет на страницы аниме Shikimori ссылку на соответствующую запись TrackAnime по идентификатору Shikimori.",
       "category": "Аниме",
       "version": "0.5",
       "sites": [
@@ -17,7 +17,7 @@
     {
       "slug": "track-anime-discord-rpc",
       "name": "track-anime Discord RPC",
-      "description": "Передаёт информацию о текущем таймлайне аниме из TrackAnime в статус Discord, связывая просмотр и активность в профиле.",
+      "description": "Экспериментальная интеграция TrackAnime с активностью Discord через локальный WebSocket-сервис; в исходном коде отмечена как неактуальная.",
       "category": "Аниме",
       "version": "0.2",
       "sites": [],
@@ -26,7 +26,7 @@
     {
       "slug": "yummyani-by-track-anime",
       "name": "yummyani by track-anime",
-      "description": "Добавляет на YummyAni кнопку перехода к TrackAnime, упрощая переключение между страницами аниме.",
+      "description": "Добавляет на страницу аниме YummyAni ссылку для перехода к соответствующей записи TrackAnime.",
       "category": "Аниме",
       "version": "2025-08-02",
       "sites": [
@@ -37,7 +37,7 @@
     {
       "slug": "anistar-kodik",
       "name": "Anistar kodik pleer",
-      "description": "Встраивает видеоплеер Kodik на страницы Anistar, добавляя дополнительный способ просмотра видео.",
+      "description": "Добавляет на страницы Anistar и Online-Star видеоплеер Kodik и позволяет переключать вариант названия для поиска видео.",
       "category": "Видео и плееры",
       "version": "0.1",
       "sites": [
@@ -48,7 +48,7 @@
     {
       "slug": "shikimorionline-bykodikplayer",
       "name": "Shikimori Online by kodik player",
-      "description": "Добавляет плеер Kodik на страницы Shikimori для просмотра видео непосредственно на сайте.",
+      "description": "Встраивает плеер Kodik на страницу аниме Shikimori, используя идентификатор произведения для поиска видео.",
       "category": "Видео и плееры",
       "version": "0.2",
       "sites": [
@@ -59,7 +59,7 @@
     {
       "slug": "vk-fix-youtube",
       "name": "VK FIX YouTube",
-      "description": "Встраивает проигрыватель YouTube для ссылок на видео в переписке ВКонтакте, позволяя смотреть ролики без лишних переходов.",
+      "description": "Находит ссылки YouTube в переписке ВКонтакте и добавляет возможность открыть встроенный проигрыватель.",
       "category": "Видео и плееры",
       "version": "2025-08-02",
       "sites": [
@@ -71,7 +71,7 @@
     {
       "slug": "youtube-no-autoplay",
       "name": "YouTube No AutoPlay",
-      "description": "Отключает автоматический запуск следующего ролика на YouTube, оставляя управление продолжением просмотра пользователю.",
+      "description": "Останавливает воспроизведение видео YouTube при навигации внутри сайта, предотвращая нежелательный автоматический запуск.",
       "category": "Видео и плееры",
       "version": "14.04.19",
       "sites": [
@@ -82,7 +82,7 @@
     {
       "slug": "youtube-all",
       "name": "YouTube — Всё сразу",
-      "description": "Объединяет набор доработок интерфейса и видеоплеера YouTube в одном пользовательском скрипте.",
+      "description": "Добавляет на YouTube набор пользовательских настроек и доработок интерфейса, объединённых в одном скрипте.",
       "category": "Видео и плееры",
       "version": "1.1",
       "sites": [
@@ -94,7 +94,7 @@
     {
       "slug": "kinopoisk-online",
       "name": "Кинопоиск Online (kodik)",
-      "description": "Добавляет встроенный плеер Kodik на страницы Кинопоиска, чтобы видео можно было открывать прямо со страницы фильма.",
+      "description": "Добавляет на страницы фильмов Кинопоиска дополнительную панель с видеоплеером Kodik.",
       "category": "Видео и плееры",
       "version": "1.3",
       "sites": [
@@ -105,7 +105,7 @@
     {
       "slug": "gxplayer-parallel-upload",
       "name": "GXPlayer Parallel Upload",
-      "description": "Ускоряет работу с очередью загрузок GXPlayer: несколько параллельных потоков, управление количеством загрузок, прогресс, оценка времени, повторы ошибок и звуковые уведомления.",
+      "description": "Добавляет на страницу загрузки GXPlayer очередь параллельной отправки файлов с настройкой потоков, прогрессом, повторами и уведомлением о завершении.",
       "category": "Загрузки",
       "version": "2.11",
       "sites": [
@@ -116,7 +116,7 @@
     {
       "slug": "youtube-ffmpeg",
       "name": "YouTube FFmpeg Downloader",
-      "description": "Добавляет инструменты скачивания и обрезки видео YouTube в браузере с обработкой через ffmpeg.wasm.",
+      "description": "Добавляет на YouTube панель инструментов для получения и обработки видеоматериалов, включая работу с фрагментами и ffmpeg.",
       "category": "Загрузки",
       "version": "1.2",
       "sites": [
@@ -127,7 +127,7 @@
     {
       "slug": "hamsterkombatgame-clicker",
       "name": "Hamster Kombat Clicker",
-      "description": "Автоматизирует повторяющиеся нажатия в Hamster Kombat, заменяя ручные клики работой пользовательского скрипта.",
+      "description": "Добавляет управление автоматическими нажатиями в Hamster Kombat и вспомогательные действия на странице игры.",
       "category": "Игры",
       "version": "2024-08-13-01",
       "sites": [
@@ -138,7 +138,7 @@
     {
       "slug": "poeautotrade",
       "name": "PoEAutoTrade",
-      "description": "Автоматизирует действия по покупке товаров из живого поиска торговли Path of Exile.",
+      "description": "Автоматизирует действия с результатами живого поиска на торговой площадке Path of Exile, упрощая отправку запросов на покупку.",
       "category": "Игры",
       "version": "0.7",
       "sites": [
@@ -150,7 +150,7 @@
     {
       "slug": "ru-raider-io",
       "name": "Raider.io русификатор",
-      "description": "Добавляет русскоязычные описания предметов на Raider.IO с использованием данных Wowhead.",
+      "description": "Заменяет ссылки на Wowhead русскоязычными адресами ru.wowhead.com на страницах сайтов; несмотря на название, не ограничен Raider.IO.",
       "category": "Игры",
       "version": "1.3",
       "sites": [
@@ -161,7 +161,7 @@
     {
       "slug": "vrchat",
       "name": "VRChat Companion",
-      "description": "Расширяет возможности сайта VRChat набором дополнительных функций и небольших улучшений интерфейса.",
+      "description": "Расширяет веб-интерфейс VRChat дополнительными инструментами для профиля, аватаров, избранного и навигации.",
       "category": "Игры",
       "version": "6.5",
       "sites": [
@@ -173,7 +173,7 @@
     {
       "slug": "wowhead-rusifikator",
       "name": "Wowhead русификатор",
-      "description": "Помогает читать описания предметов World of Warcraft на русском языке с использованием данных Wowhead.",
+      "description": "Заменяет ссылки на Wowhead русскоязычными адресами ru.wowhead.com на посещаемых веб-страницах.",
       "category": "Игры",
       "version": "1.4",
       "sites": [
@@ -185,7 +185,7 @@
     {
       "slug": "analit",
       "name": "Analit",
-      "description": "Экспериментальный внутренний скрипт аналитики для проекта DygDygWEB.",
+      "description": "Вспомогательная функция аналитики DygDygWEB: формирует сообщение об изменении версии и отправляет его через Discord webhook. Самостоятельным userscript-файлом без метаданных не является.",
       "category": "Инструменты разработчика",
       "version": "1.0",
       "sites": [],
@@ -194,7 +194,7 @@
     {
       "slug": "json-format",
       "name": "JSON Formatter",
-      "description": "Преобразует необработанный JSON в более удобное для чтения форматированное представление прямо в браузере.",
+      "description": "Отображает JSON в удобном структурированном виде с настройками оформления и инструментами копирования.",
       "category": "Инструменты разработчика",
       "version": "2.2.2",
       "sites": [],
@@ -203,7 +203,7 @@
     {
       "slug": "google-favicon",
       "name": "Google Favicons",
-      "description": "Показывает значки сайтов рядом с результатами поиска Google, помогая быстрее различать источники.",
+      "description": "Добавляет значки сайтов к результатам поиска Google, чтобы было проще узнавать источники.",
       "category": "Поиск",
       "version": "1.1",
       "sites": [
@@ -215,7 +215,7 @@
     {
       "slug": "translate",
       "name": "Переводчик Google",
-      "description": "Позволяет быстро перевести выделенный на странице текст с помощью Google Translate.",
+      "description": "Добавляет перевод выделенного текста на веб-страницах с помощью Google Translate и показывает результат во всплывающем интерфейсе.",
       "category": "Поиск",
       "version": "2.2.2",
       "sites": [],
@@ -224,7 +224,7 @@
     {
       "slug": "discord-utility",
       "name": "Discord Tool",
-      "description": "Добавляет небольшие улучшения веб-интерфейса Discord, включая дополнительную отметку в названии канала.",
+      "description": "Добавляет вспомогательную панель и команды для Discord: работу с названием канала, отправкой сообщений и переименованием диалога.",
       "category": "Соцсети",
       "version": "0.3",
       "sites": [
@@ -235,7 +235,7 @@
     {
       "slug": "anistar-custom-style",
       "name": "Anistar custom style",
-      "description": "Меняет оформление Anistar и Online-Star с помощью пользовательских стилей интерфейса.",
+      "description": "Изменяет оформление Anistar и Online-Star: добавляет пользовательские стили и настройки внешнего вида сайта.",
       "category": "Стили и темы",
       "version": "0.47.12",
       "sites": [
@@ -247,7 +247,7 @@
     {
       "slug": "vk-dark",
       "name": "Dark VK Theme",
-      "description": "Применяет тёмное оформление к интерфейсу ВКонтакте для более комфортной работы в тёмной теме.",
+      "description": "Добавляет тёмное оформление ВКонтакте с пользовательскими настройками темы и элементов интерфейса.",
       "category": "Стили и темы",
       "version": "0.0.11.82",
       "sites": [
@@ -258,7 +258,7 @@
     {
       "slug": "aliexpress",
       "name": "AliExpress — таймер заказа",
-      "description": "Показывает, сколько времени прошло с момента оформления заказа на AliExpress.",
+      "description": "Показывает, сколько времени прошло с момента оформления заказа на AliExpress, помогая отслеживать срок ожидания посылки.",
       "category": "Утилиты",
       "version": "2.2.2",
       "sites": [
@@ -269,7 +269,7 @@
     {
       "slug": "anistar-redirect",
       "name": "Anistar редирект",
-      "description": "Перенаправляет со старого адреса Anistar на актуальный сайт, избавляя от ручного перехода.",
+      "description": "Перенаправляет со старого адреса Anistar на доступное зеркало через ссылку на странице сайта.",
       "category": "Утилиты",
       "version": "0.7",
       "sites": [
@@ -280,7 +280,7 @@
     {
       "slug": "bookmyshow",
       "name": "BookMyShow — Movie Info Collector FIX",
-      "description": "Сбор данных фильма BookMyShow с обновлением данных при каждом открытии меню",
+      "description": "Собирает сведения о фильме на BookMyShow, включая описание, жанры, участников, длительность и изображения; обновляет данные при открытии панели.",
       "category": "Кино",
       "version": "1.8",
       "sites": [
@@ -289,9 +289,20 @@
       "author": "ДугДуг"
     },
     {
+      "slug": "bookmyshow-movie-info",
+      "name": "BookMyShow — Movie Info Collector (архив)",
+      "description": "Архивный сборщик информации о фильме на BookMyShow: извлекает жанры, участников, продолжительность и изображения для копирования.",
+      "category": "Кино",
+      "version": "1.4",
+      "sites": [
+        "in.bookmyshow.com"
+      ],
+      "author": "ДугДуг"
+    },
+    {
       "slug": "antilah",
       "name": "Антилах",
-      "description": "Перехватывает сочетания Ctrl+Win и Shift+Win, чтобы уменьшить нежелательные реакции интерфейса при работе с сайтами.",
+      "description": "Исправляет текст, набранный в неправильной раскладке, и случайный Caps Lock с помощью настраиваемых сочетаний клавиш.",
       "category": "Утилиты",
       "version": "2.1.8",
       "sites": [],
@@ -300,7 +311,7 @@
     {
       "slug": "disable-mouse-buttons2-3",
       "name": "Отключить вперёд/назад",
-      "description": "Предотвращает случайные переходы назад и вперёд при нажатии дополнительных кнопок мыши во время просмотра страниц.",
+      "description": "Пытается блокировать стандартные действия кнопок мыши «Назад» и «Вперёд» на веб-страницах, чтобы избежать случайной навигации.",
       "category": "Утилиты",
       "version": "2025-05-05",
       "sites": [],
@@ -309,7 +320,7 @@
     {
       "slug": "tbank-qr-screenshot-upload",
       "name": "TBank QR Screenshot Upload (v5)",
-      "description": "Автоматический скриншот выбранного окна и вставка QR-кода в форму Т-Банка (работает при SPA-навигации)",
+      "description": "Добавляет на страницу сканирования QR-кода Т-Банка кнопку захвата выбранного окна и вставки изображения в форму.",
       "category": "Утилиты",
       "version": "1.5",
       "sites": [
@@ -320,7 +331,7 @@
     {
       "slug": "imdb-movie-info-collector",
       "name": "IMDb — Movie Info Collector (v3.4 Votes Parser + TTID)",
-      "description": "IMDb: добавлен парсер голосов (2.2K → 2200), поле IMDb ID, студия, рейтинг, постер, актёры и прочее",
+      "description": "Собирает данные со страницы фильма IMDb: идентификатор, рейтинг, число голосов, участников, постер и другие сведения для копирования.",
       "category": "Кино",
       "version": "3.4",
       "sites": [
@@ -333,7 +344,7 @@
     {
       "slug": "inline-youtube-style",
       "name": "Inline YouTube Style",
-      "description": "Add custom CSS to YouTube",
+      "description": "Применяет собственные CSS-правила к YouTube для изменения масштаба и расположения карточек видео в сетке.",
       "category": "Стили и темы",
       "version": "1.0",
       "sites": [
@@ -344,7 +355,7 @@
     {
       "slug": "clean-copy-real",
       "name": "Clean Copy REAL",
-      "description": "Скрипт из резервной копии Tampermonkey",
+      "description": "Убирает вставку «Смотреть подробнее» из копируемого текста на filmix.my, оставляя в буфере очищенный текст.",
       "category": "Утилиты",
       "version": "2.0",
       "sites": [],
@@ -353,7 +364,7 @@
     {
       "slug": "paste4-bbupload-tools",
       "name": "Paste4 -> BBUpload tools",
-      "description": "Ищет ссылки на bbupload на paste4, показывает размер и FileName, добавляет копирование, счётчик 1080р/720р, подсветку 1080р и закреплённый баннер",
+      "description": "Находит ссылки BBUpload на Paste4, показывает сведения о файлах, выделяет качество 1080p и добавляет кнопки копирования и счётчики.",
       "category": "Загрузки",
       "version": "1.8",
       "sites": [
@@ -365,7 +376,7 @@
     {
       "slug": "bookmyshow-hide-added-movies",
       "name": "BookMyShow hide added movies + copy ID",
-      "description": "Скрывает фильмы BookMyShow по ID + копирование",
+      "description": "Скрывает выбранные фильмы в списках BookMyShow по их идентификаторам, сохраняет список исключений и добавляет инструменты копирования ID.",
       "category": "Кино",
       "version": "1.2",
       "sites": [
@@ -376,7 +387,7 @@
     {
       "slug": "filmix-clean-copy",
       "name": "Filmix: убрать \"Смотреть подробнее\" при копировании",
-      "description": "Отключает добавление ссылки Filmix при копировании текста",
+      "description": "Убирает добавляемую Filmix ссылку «Смотреть подробнее» при копировании текста с filmix.gg.",
       "category": "Утилиты",
       "version": "1.0",
       "sites": [
@@ -387,7 +398,7 @@
     {
       "slug": "youtube-shorts-resize-scroll-guard",
       "name": "YouTube Shorts Resize Scroll Guard",
-      "description": "Не даёт Shorts перелистываться при resize/переносе окна; обычный скролл не трогает",
+      "description": "Предотвращает случайное переключение YouTube Shorts при изменении размера или переносе окна, сохраняя обычную прокрутку.",
       "category": "Видео и плееры",
       "version": "0.2.0",
       "sites": [
@@ -398,7 +409,7 @@
     {
       "slug": "chatgpt-copy-helper",
       "name": "ChatGPT [+..+] Copy Helper",
-      "description": "Ищет на странице фрагменты в виде [+ ... +] и добавляет кнопку для копирования содержимого в буфер обмена",
+      "description": "Находит в ответах ChatGPT фрагменты в формате [+ ... +] и добавляет рядом кнопку для копирования их содержимого.",
       "category": "Инструменты",
       "version": "1.0.0",
       "sites": [
