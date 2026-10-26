@@ -26,9 +26,18 @@ document.querySelector('#modal-close').addEventListener('click', closeModal);
 overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
+const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+function setDocParam(slug) {
+  const url = new URL(window.location.href);
+  if (slug) url.searchParams.set('doc', slug); else url.searchParams.delete('doc');
+  history.replaceState(null, '', url);
+}
+
 function closeModal() {
   overlay.hidden = true;
   document.body.style.overflow = '';
+  setDocParam('');
 }
 
 function openDocs(s) {
@@ -38,6 +47,7 @@ function openDocs(s) {
   modalInstall.href = './scripts/' + s.slug + '/' + s.slug + '.user.js';
   overlay.hidden = false;
   document.body.style.overflow = 'hidden';
+  setDocParam(s.slug);
   fetch(`./scripts/${s.slug}/README.md`, { cache: 'no-store' })
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
     .then(md => { modalBody.innerHTML = renderMarkdown(md); modalBody.scrollTop = 0; })
@@ -246,6 +256,13 @@ async function init() {
     buildCatPills();
     render();
     if (showcase) { showcase.classList.add('show-live'); startShowcase(); }
+
+    /* shareable deep link: ?doc=<slug> opens the docs modal on load */
+    const docParam = new URLSearchParams(window.location.search).get('doc');
+    if (docParam && SLUG_RE.test(docParam)) {
+      const target = scripts.find(s => s.slug === docParam);
+      if (target) openDocs(target);
+    }
   } catch (e) {
     grid.replaceChildren(el('p', 'empty', 'Ошибка загрузки каталога. Обновите страницу.'));
     console.error(e);
