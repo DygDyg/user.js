@@ -6,9 +6,11 @@
       "name": "Shikimori By TrackAnime",
       "description": "Добавляет на страницы аниме Shikimori удобную кнопку перехода к TrackAnime, чтобы быстрее открывать связанную страницу.",
       "category": "Аниме",
-      "version": "0.4",
+      "version": "0.5",
       "sites": [
-        "shikimori.one"
+        "shikimori.one",
+        "shiki.one",
+        "shikimori.io"
       ],
       "author": "ДугДуг"
     },
