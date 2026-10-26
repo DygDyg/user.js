@@ -241,11 +241,8 @@ async function init() {
       option.value = name;
       authorSel.append(option);
     }
-    // нативный dropdown в новых Chrome/Edge поддерживает стилизацию option
-    if ('CSS' in window && CSS.supports && CSS.supports('appearance: base-select')) {
-      authorSel.classList.add('base-select');
-      sortSel.classList.add('base-select');
-    }
+    enhanceSelect(authorSel);
+    enhanceSelect(sortSel);
 
     const cats = new Set(scripts.map(s => s.category).filter(Boolean));
     const authors = new Set(scripts.map(s => s.author).filter(Boolean));
@@ -426,6 +423,103 @@ function startShowcase() {
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) clearInterval(timer); else restartTimer();
   });
+}
+
+/* ---------- themed dropdowns: authors and sorting ---------- */
+function enhanceSelect(select) {
+  const wrap = select.closest('.select-wrap');
+  if (!wrap) return;
+  wrap.classList.add('custom-select-wrap');
+  select.classList.add('visually-hidden-select');
+  select.tabIndex = -1;
+  select.setAttribute('aria-hidden', 'true');
+
+  const trigger = el('button', 'custom-select-trigger');
+  trigger.type = 'button';
+  trigger.setAttribute('aria-haspopup', 'listbox');
+  trigger.setAttribute('aria-expanded', 'false');
+  trigger.setAttribute('aria-label', select.getAttribute('aria-label') || 'Выбрать');
+  const label = el('span', 'custom-select-label');
+  const chevron = el('span', 'custom-select-chevron', '⌄');
+  chevron.setAttribute('aria-hidden', 'true');
+  trigger.append(label, chevron);
+
+  const menu = el('div', 'custom-select-menu');
+  menu.id = select.id + '-menu';
+  menu.setAttribute('role', 'listbox');
+  menu.setAttribute('aria-label', select.getAttribute('aria-label') || 'Варианты');
+  menu.hidden = true;
+  trigger.setAttribute('aria-controls', menu.id);
+  wrap.append(trigger, menu);
+
+  const options = () => [...menu.querySelectorAll('[role="option"]')];
+  function sync() {
+    label.textContent = select.selectedOptions[0]?.textContent || '';
+    options().forEach(opt => {
+      const selected = opt.dataset.value === select.value;
+      opt.setAttribute('aria-selected', String(selected));
+      opt.classList.toggle('selected', selected);
+    });
+  }
+  function close() {
+    menu.hidden = true;
+    wrap.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+  function open() {
+    document.querySelectorAll('.custom-select-wrap.is-open').forEach(w => {
+      if (w !== wrap) w.querySelector('.custom-select-trigger')?.click();
+    });
+    menu.hidden = false;
+    wrap.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+    const active = options().find(o => o.dataset.value === select.value) || options()[0];
+    active?.focus();
+  }
+  function choose(opt) {
+    select.value = opt.dataset.value;
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+    sync();
+    close();
+    trigger.focus();
+  }
+  function build() {
+    menu.replaceChildren();
+    [...select.options].forEach((option, i) => {
+      const item = el('button', 'custom-select-option', option.textContent);
+      item.type = 'button';
+      item.dataset.value = option.value;
+      item.setAttribute('role', 'option');
+      item.id = select.id + '-option-' + i;
+      item.tabIndex = -1;
+      item.addEventListener('click', () => choose(item));
+      item.addEventListener('keydown', e => {
+        const all = options(), index = all.indexOf(item);
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          all[(index + (e.key === 'ArrowDown' ? 1 : -1) + all.length) % all.length]?.focus();
+        } else if (e.key === 'Home' || e.key === 'End') {
+          e.preventDefault();
+          all[e.key === 'Home' ? 0 : all.length - 1]?.focus();
+        } else if (e.key === 'Escape') {
+          e.preventDefault(); close(); trigger.focus();
+        } else if (e.key === 'Tab') close();
+      });
+      menu.append(item);
+    });
+    sync();
+  }
+  trigger.addEventListener('click', () => menu.hidden ? open() : close());
+  trigger.addEventListener('keydown', e => {
+    if (['ArrowDown', 'ArrowUp', 'Enter', ' '].includes(e.key)) {
+      e.preventDefault();
+      if (menu.hidden) open();
+    } else if (e.key === 'Escape') close();
+  });
+  document.addEventListener('pointerdown', e => { if (!wrap.contains(e.target)) close(); });
+  document.addEventListener('focusin', e => { if (!wrap.contains(e.target)) close(); });
+  select.addEventListener('change', sync);
+  build();
 }
 
 search.addEventListener('input', render);
